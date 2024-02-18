@@ -1,21 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "H:\\project C# amd server\\Project-SH-B\\project C# amd server\\Project\\Dal\\Dal.csproj": {}
+    "C:\\Project-SH-B\\project C# amd server\\Project\\Dal\\Dal.csproj": {}
   },
   "projects": {
-    "H:\\project C# amd server\\Project-SH-B\\project C# amd server\\Project\\Dal\\Dal.csproj": {
+    "C:\\Project-SH-B\\project C# amd server\\Project\\Dal\\Dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\project C# amd server\\Project-SH-B\\project C# amd server\\Project\\Dal\\Dal.csproj",
+        "projectUniqueName": "C:\\Project-SH-B\\project C# amd server\\Project\\Dal\\Dal.csproj",
         "projectName": "Dal",
-        "projectPath": "H:\\project C# amd server\\Project-SH-B\\project C# amd server\\Project\\Dal\\Dal.csproj",
+        "projectPath": "C:\\Project-SH-B\\project C# amd server\\Project\\Dal\\Dal.csproj",
         "packagesPath": "C:\\Users\\מישקובסקי שושנה\\.nuget\\packages\\",
-        "outputPath": "H:\\project C# amd server\\Project-SH-B\\project C# amd server\\Project\\Dal\\obj\\",
+        "outputPath": "C:\\Project-SH-B\\project C# amd server\\Project\\Dal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\מישקובסקי שושנה\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -78,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

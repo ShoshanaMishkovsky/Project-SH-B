@@ -11,9 +11,9 @@ namespace Bl.Blservices
     public class BlDietitianService: IBlDietitianService
     {
         IDietitianService dietitianService;
-        public BlDietitianService(IDietitianService dietitianService)
-        {  this.dietitianService=
-                dietitianService;
+        public BlDietitianService(BlManager instance)
+        {
+            this.dietitianService = (IDietitianService)instance.Dietitians;
         }
 
 

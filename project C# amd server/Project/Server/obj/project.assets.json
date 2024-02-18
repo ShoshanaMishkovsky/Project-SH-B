@@ -3342,21 +3342,19 @@
   },
   "packageFolders": {
     "C:\\Users\\מישקובסקי שושנה\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\project C# amd server\\Project-SH-B\\project C# amd server\\Project\\Server\\Server.csproj",
+      "projectUniqueName": "C:\\Project-SH-B\\project C# amd server\\Project\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "H:\\project C# amd server\\Project-SH-B\\project C# amd server\\Project\\Server\\Server.csproj",
+      "projectPath": "C:\\Project-SH-B\\project C# amd server\\Project\\Server\\Server.csproj",
       "packagesPath": "C:\\Users\\מישקובסקי שושנה\\.nuget\\packages\\",
-      "outputPath": "H:\\project C# amd server\\Project-SH-B\\project C# amd server\\Project\\Server\\obj\\",
+      "outputPath": "C:\\Project-SH-B\\project C# amd server\\Project\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\מישקובסקי שושנה\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3368,15 +3366,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "H:\\project C# amd server\\Project-SH-B\\project C# amd server\\Project\\BL\\Bl.csproj": {
-              "projectPath": "H:\\project C# amd server\\Project-SH-B\\project C# amd server\\Project\\BL\\Bl.csproj"
+            "C:\\Project-SH-B\\project C# amd server\\Project\\BL\\Bl.csproj": {
+              "projectPath": "C:\\Project-SH-B\\project C# amd server\\Project\\BL\\Bl.csproj"
             }
           }
         }
@@ -3425,7 +3422,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
