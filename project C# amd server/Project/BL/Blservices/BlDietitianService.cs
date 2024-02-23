@@ -4,6 +4,7 @@ using Dal.Services;
 using Dal.Models;
 using Bl.Blservices;
 using Bl.BlApi;
+using Dal;
 
 namespace Bl.Blservices
 {
@@ -11,7 +12,7 @@ namespace Bl.Blservices
     public class BlDietitianService: IBlDietitianService
     {
         IDietitianService dietitianService;
-        public BlDietitianService(BlManager instance)
+        public BlDietitianService(DalManager instance)
         {
             this.dietitianService = (IDietitianService)instance.Dietitians;
         }

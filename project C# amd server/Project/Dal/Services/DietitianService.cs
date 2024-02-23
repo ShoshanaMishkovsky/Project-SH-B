@@ -11,9 +11,9 @@ namespace Dal.Services
     public class DietitianService : IDietitianService
     {
         NutritionContext nutritionContext;
-        public DietitianService(DalManager instance)
+        public DietitianService(NutritionContext instance)
         {
-            this.nutritionContext = (NutritionContext?)instance.Dietitians;
+            this.nutritionContext = instance;
         }
         public List<Meeting> GetMeetingsById(int id)
         {
