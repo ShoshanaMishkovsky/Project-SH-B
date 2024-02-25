@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace Bl.BlApi
 {
-    public interface IBlDietitianService:Icrud<BlDietitian>
+    public interface IBlDietitianService:Icrud<Bl.BlModels.Dietitian,BlDietitian>
     {
         public List<BlModels.Meeting> GetTodatMeetingsById(int Id);
+
     }
 }

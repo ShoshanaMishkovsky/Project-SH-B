@@ -16,6 +16,7 @@ public partial class NutritionContext : DbContext
     public virtual DbSet<Dietitian> Dietitians { get; set; }
 
     public virtual DbSet<Meeting> Meetings { get; set; }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Project-SH-B\\project C# amd server\\Project\\DB\\Nutrition.mdf\";Integrated Security=True;Connect Timeout=30");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

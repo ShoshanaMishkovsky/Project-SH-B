@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Bl.BlApi
 {
-    public interface IBlMeetingService : Icrud<Meeting>
+    public interface IBlMeetingService : Icrud<Meeting, Meeting>
     {
         public void SetMeetingsAsExist(General_meeting_details general_Meeting_Details);
 

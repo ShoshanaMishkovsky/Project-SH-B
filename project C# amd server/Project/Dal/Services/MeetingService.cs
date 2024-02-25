@@ -15,6 +15,12 @@ namespace Dal.Services
         {
             this.nutritionContext = nutritionContext;
         }
+
+        public Meeting Add(Meeting obg)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Meeting> GetAll()
         {
           return nutritionContext.Meetings.ToList();
@@ -24,6 +30,8 @@ namespace Dal.Services
            Meeting meeting1= nutritionContext.Meetings.FirstOrDefault(m=>m.Code==meeting.Code);
             meeting1.Status = "existed";
         }
+
+
 
     }
 }

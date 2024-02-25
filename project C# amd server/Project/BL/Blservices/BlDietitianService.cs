@@ -14,7 +14,7 @@ namespace Bl.Blservices
         IDietitianService dietitianService;
         public BlDietitianService(DalManager instance)
         {
-            this.dietitianService = (IDietitianService)instance.Dietitians;
+            this.dietitianService =instance.Dietitians;
         }
 
 
@@ -27,12 +27,7 @@ namespace Bl.Blservices
             list.ForEach(m => meetings.Add(new BlModels.Meeting() { FirstName = m.Client.FirstName, LastName = m.Client.LastName, Age = DateTime.Now.Year - m.Client.BirthDate.Year, Hour = m.Hour, Phone = m.Client.Phone }));
             return meetings;
         }
-        //public Dietitian Add(Dietitian dietitian)
-        //{
-        //    nutritionContext.Dietitians.Add(dietitian);
-        //    nutritionContext.SaveChanges();
-        //    return dietitian;
-        //}
+   
 
         //public int Delete(Dietitian dietitian)
         //{
@@ -50,6 +45,23 @@ namespace Bl.Blservices
 
 
         }
+
+    
+
+        public BlModels.Dietitian Add(BlModels.Dietitian d)
+        {
+            Dal.Models.Dietitian dietitian=new();
+           
+          dietitian.Kind = d.Kind;
+            dietitian.Id = d.Id;
+            dietitian.LastName = d.LastName;
+            dietitian.FirstName = d.FirstName;
+            dietitian.Email = d.Email;
+            dietitian.Phone = d.Phone;
+            dietitianService.Add(dietitian);
+            return d;
+        }
+
 
         //public Dietitian Update(Dietitian dietitian, int id)
         //{

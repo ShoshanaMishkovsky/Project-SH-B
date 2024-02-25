@@ -10,7 +10,7 @@ namespace Dal.DalApi
     {
 
         List<T> GetAll();
-        //T Add(T obg);
+        T Add(T obg);
         //T Update(T obg, int id);
         //int Delete(T obg);
     }

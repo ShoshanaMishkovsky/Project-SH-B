@@ -30,6 +30,11 @@ namespace Server.Controllers
             return dietitianService.GetTodatMeetingsById(DietitianId);
 
         }
+        [HttpPost]
+       public ActionResult<Bl.BlModels.Dietitian> AddDietitian(Bl.BlModels.Dietitian dietitian)
+        {
+            return dietitianService.Add(dietitian);
+        }
 
 
     }

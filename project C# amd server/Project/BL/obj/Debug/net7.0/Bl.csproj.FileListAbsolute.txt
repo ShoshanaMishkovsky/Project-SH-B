@@ -97,3 +97,18 @@ C:\Project-SH-B\project C# amd server\Project\BL\obj\Debug\net7.0\Bl.dll
 C:\Project-SH-B\project C# amd server\Project\BL\obj\Debug\net7.0\refint\Bl.dll
 C:\Project-SH-B\project C# amd server\Project\BL\obj\Debug\net7.0\Bl.pdb
 C:\Project-SH-B\project C# amd server\Project\BL\obj\Debug\net7.0\ref\Bl.dll
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\BL\bin\Debug\net7.0\Bl.deps.json
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\BL\bin\Debug\net7.0\Bl.dll
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\BL\bin\Debug\net7.0\Bl.pdb
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\BL\bin\Debug\net7.0\Dal.dll
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\BL\bin\Debug\net7.0\Dal.pdb
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\BL\obj\Debug\net7.0\Bl.csproj.AssemblyReference.cache
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\BL\obj\Debug\net7.0\Bl.GeneratedMSBuildEditorConfig.editorconfig
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\BL\obj\Debug\net7.0\Bl.AssemblyInfoInputs.cache
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\BL\obj\Debug\net7.0\Bl.AssemblyInfo.cs
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\BL\obj\Debug\net7.0\Bl.csproj.CoreCompileInputs.cache
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\BL\obj\Debug\net7.0\Bl.csproj.CopyComplete
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\BL\obj\Debug\net7.0\Bl.dll
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\BL\obj\Debug\net7.0\refint\Bl.dll
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\BL\obj\Debug\net7.0\Bl.pdb
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\BL\obj\Debug\net7.0\ref\Bl.dll

@@ -19,13 +19,13 @@ namespace Dal
         {
             ServiceCollection services = new ServiceCollection();
             services.AddSingleton<NutritionContext>();
-            DBActions db = new DBActions(/*builder.*/Configuration);
-            string connStr = db.GetConnectionString("NutritionContext");
-            Services.AddDbContext<NutritionContext>(opt => opt.UseSqlServer(connStr));
+            //DBActions db = new DBActions(/*builder.*/Configuration);
+            //string connStr = db.GetConnectionString("NutritionContext");
+            //Services.AddDbContext<NutritionContext>(opt => opt.UseSqlServer(connStr));
             services.AddScoped<IDietitianService, DietitianService>();
             services.AddScoped<IMeetingService,MeetingService>();
             ServiceProvider servicesProvider = services.BuildServiceProvider();
-            Dietitians= servicesProvider.GetRequiredService<IDietitianService>();
+           Dietitians= servicesProvider.GetRequiredService<IDietitianService>();
             Meetings= servicesProvider.GetRequiredService<IMeetingService>();
 
         }

@@ -110,3 +110,17 @@ C:\Project-SH-B\project C# amd server\Project\Dal\obj\Debug\net7.0\refint\Dal.dl
 C:\Project-SH-B\project C# amd server\Project\Dal\obj\Debug\net7.0\Dal.pdb
 C:\Project-SH-B\project C# amd server\Project\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
 C:\Project-SH-B\project C# amd server\Project\Dal\obj\Debug\net7.0\ref\Dal.dll
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\Dal\obj\Debug\net7.0\Dal.csproj.AssemblyReference.cache
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\Dal\obj\Debug\net7.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\Dal\obj\Debug\net7.0\Dal.AssemblyInfoInputs.cache
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\Dal\obj\Debug\net7.0\Dal.AssemblyInfo.cs
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\Dal\obj\Debug\net7.0\Dal.csproj.CoreCompileInputs.cache
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\Dal\obj\Debug\net7.0\Dal.dll
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\Dal\obj\Debug\net7.0\refint\Dal.dll
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\Dal\obj\Debug\net7.0\Dal.pdb
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\Dal\bin\Debug\net7.0\Dal.deps.json
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\Dal\bin\Debug\net7.0\Dal.runtimeconfig.json
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\Dal\bin\Debug\net7.0\Dal.dll
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\Dal\bin\Debug\net7.0\Dal.pdb
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
+H:\project C# amd server\Project-SH-B\project C# amd server\Project\Dal\obj\Debug\net7.0\ref\Dal.dll
