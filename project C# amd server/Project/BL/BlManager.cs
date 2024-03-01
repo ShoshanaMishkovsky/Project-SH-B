@@ -14,12 +14,14 @@ namespace Bl
     {
         public IBlDietitianService Dietitians { get; set; }
         public IBlMeetingService Meetings { get; set; }
+      
         public BlManager()
         {
             ServiceCollection services = new ServiceCollection();
             services.AddSingleton<DalManager>();
             services.AddScoped<IBlDietitianService,BlDietitianService>();
             services.AddScoped<IBlMeetingService, BlMeetingService>();
+          
             ServiceProvider serviceProvider = services.BuildServiceProvider();
 
             Dietitians = serviceProvider.GetRequiredService<IBlDietitianService>();

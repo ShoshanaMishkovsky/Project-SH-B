@@ -25,7 +25,7 @@ namespace Dal
             services.AddScoped<IDietitianService, DietitianService>();
             services.AddScoped<IMeetingService,MeetingService>();
             ServiceProvider servicesProvider = services.BuildServiceProvider();
-           Dietitians= servicesProvider.GetRequiredService<IDietitianService>();
+            Dietitians= servicesProvider.GetRequiredService<IDietitianService>();
             Meetings= servicesProvider.GetRequiredService<IMeetingService>();
 
         }

@@ -17,9 +17,7 @@ namespace Bl.Blservices
             this.dietitianService =instance.Dietitians;
         }
 
-
-
-
+        #region get functions
         public List<BlModels.Meeting> GetTodatMeetingsById(int Id)
         {
             List<BlModels.Meeting> meetings = new List<BlModels.Meeting>();
@@ -27,18 +25,10 @@ namespace Bl.Blservices
             list.ForEach(m => meetings.Add(new BlModels.Meeting() { FirstName = m.Client.FirstName, LastName = m.Client.LastName, Age = DateTime.Now.Year - m.Client.BirthDate.Year, Hour = m.Hour, Phone = m.Client.Phone }));
             return meetings;
         }
-   
-
-        //public int Delete(Dietitian dietitian)
-        //{
-        //    nutritionContext.Dietitians.Remove(dietitian);
-        //    nutritionContext.SaveChanges();
-        //    return dietitian.Id;
-        //}
 
         public List<BlDietitian> GetAll()
         {
-           List<BlDietitian> blDietitians = new List<BlDietitian>();
+            List<BlDietitian> blDietitians = new List<BlDietitian>();
             var list = dietitianService.GetAll();
             list.ForEach(d => blDietitians.Add(new BlDietitian() { Email = d.Email, Phone = d.Phone, FirstName = d.FirstName, LastName = d.LastName, Kind = d.Kind }));
             return blDietitians;
@@ -46,13 +36,17 @@ namespace Bl.Blservices
 
         }
 
-    
+
+
+        #endregion get functions
+
+        #region add functions
 
         public BlModels.Dietitian Add(BlModels.Dietitian d)
         {
-            Dal.Models.Dietitian dietitian=new();
-           
-          dietitian.Kind = d.Kind;
+            Dal.Models.Dietitian dietitian = new();
+
+            dietitian.Kind = d.Kind;
             dietitian.Id = d.Id;
             dietitian.LastName = d.LastName;
             dietitian.FirstName = d.FirstName;
@@ -61,6 +55,24 @@ namespace Bl.Blservices
             dietitianService.Add(dietitian);
             return d;
         }
+
+        #endregion add functions
+
+
+
+
+
+        //public int Delete(Dietitian dietitian)
+        //{
+        //    nutritionContext.Dietitians.Remove(dietitian);
+        //    nutritionContext.SaveChanges();
+        //    return dietitian.Id;
+        //}
+
+
+
+
+
 
 
         //public Dietitian Update(Dietitian dietitian, int id)
