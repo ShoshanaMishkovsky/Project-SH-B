@@ -63,7 +63,7 @@ builder.Services.AddSingleton<BlManager>();
 
 DBActions db = new DBActions(builder.Configuration);
 string connStr = db.GetConnectionString("NutritionContext");
-builder.Services.AddDbContext<NutritionContext>(opt => opt.UseSqlServer(connStr));
+builder.Services.AddDbContext<NutritionInstitute>(opt => opt.UseSqlServer(connStr));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var app = builder.Build();

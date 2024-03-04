@@ -25,7 +25,7 @@ namespace Server.Controllers
         }
         [HttpGet("{DietitianId}")]
 
-        public ActionResult<List<Bl.BlModels.Meeting>> GetTodayMeetingsById(int DietitianId)
+        public ActionResult<List<Bl.BlModels.MeetingForDietitian>> GetTodayMeetingsById(int DietitianId)
         {
             return dietitianService.GetTodatMeetingsById(DietitianId);
 

@@ -571,7 +571,6 @@ C:\Project-SH-B\project C# amd server\Project\Server\obj\Debug\net7.0\Server.Gen
 C:\Project-SH-B\project C# amd server\Project\Server\obj\Debug\net7.0\Server.AssemblyInfoInputs.cache
 C:\Project-SH-B\project C# amd server\Project\Server\obj\Debug\net7.0\Server.AssemblyInfo.cs
 C:\Project-SH-B\project C# amd server\Project\Server\obj\Debug\net7.0\Server.csproj.CoreCompileInputs.cache
-C:\Project-SH-B\project C# amd server\Project\Server\obj\Debug\net7.0\Server.MvcApplicationPartsAssemblyInfo.cs
 C:\Project-SH-B\project C# amd server\Project\Server\obj\Debug\net7.0\Server.MvcApplicationPartsAssemblyInfo.cache
 C:\Project-SH-B\project C# amd server\Project\Server\obj\Debug\net7.0\staticwebassets\msbuild.Server.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Project-SH-B\project C# amd server\Project\Server\obj\Debug\net7.0\staticwebassets\msbuild.build.Server.props
@@ -667,3 +666,4 @@ H:\project C# amd server\Project-SH-B\project C# amd server\Project\Server\obj\D
 H:\project C# amd server\Project-SH-B\project C# amd server\Project\Server\obj\Debug\net7.0\Server.csproj.CopyComplete
 H:\project C# amd server\Project-SH-B\project C# amd server\Project\Server\obj\Debug\net7.0\Server.genruntimeconfig.cache
 H:\project C# amd server\Project-SH-B\project C# amd server\Project\Server\obj\Debug\net7.0\ref\Server.dll
+C:\Project-SH-B\project C# amd server\Project\Server\obj\Debug\net7.0\Server.MvcApplicationPartsAssemblyInfo.cs

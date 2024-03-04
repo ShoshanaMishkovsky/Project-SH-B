@@ -12,7 +12,7 @@ namespace Bl.BlModels
 
         public string LastName { get; set; } = null!;
 
-        public string? Email { get; set; }
+        public string Email { get; set; }
 
         public string Phone { get; set; } = null!;
 

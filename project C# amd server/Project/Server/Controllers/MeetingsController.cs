@@ -15,12 +15,22 @@ namespace Server.Controllers
         {
             this.BlMeetingService = instance.Meetings;
         }
-       
+        [HttpGet]
+        public List<General_meeting_details> GetAll()
+        {
+            return BlMeetingService.GetAll();
+        }
         [HttpPut]
         public void SetMeetingsAsExist(General_meeting_details general_Meeting_Details)
         {
             BlMeetingService.SetMeetingsAsExist(general_Meeting_Details);
         }
+        //[HttpPost]
+        //public ActionResult<Meeting> Post()
+        //{
+        //   return  BlMeetingService.Add();
+            
+        //}
 
     }
 }

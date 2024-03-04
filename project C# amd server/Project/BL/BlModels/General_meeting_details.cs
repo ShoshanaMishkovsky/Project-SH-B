@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bl.BlModels
 {
-    public class General_meeting_details
+    public class General_meeting_details:AllTheDetailsOfMeeting
     {
         public int DieticanId { get; set; }
 

@@ -10,14 +10,14 @@ namespace Dal.Services
 {
     public class DietitianService : IDietitianService
     {
-        NutritionContext nutritionContext;
-        public DietitianService(NutritionContext instance)
+        NutritionInstitute nutritionContext;
+        public DietitianService(NutritionInstitute instance)
         {
             this.nutritionContext = instance;
         }
         public List<Meeting> GetMeetingsById(int id)
         {
-            List<Meeting> list = new List<Meeting>();
+            List<Dal.Models.Meeting> list = new List<Meeting>();
             list= nutritionContext.Meetings.Where(m => m.DieticanId == id).ToList();
             return list;
         }

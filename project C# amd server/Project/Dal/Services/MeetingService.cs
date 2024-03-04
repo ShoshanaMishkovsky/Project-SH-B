@@ -10,15 +10,16 @@ namespace Dal.Services
 {
     public class MeetingService : IMeetingService
     {
-        NutritionContext nutritionContext; 
-        public MeetingService(NutritionContext nutritionContext)
+        NutritionInstitute nutritionContext; 
+        public MeetingService(NutritionInstitute nutritionContext)
         {
             this.nutritionContext = nutritionContext;
         }
 
-        public Meeting Add(Meeting obg)
+        public Meeting Add(Meeting meeting)
         {
-            throw new NotImplementedException();
+            nutritionContext.Add(meeting);
+            return meeting;
         }
 
         public List<Meeting> GetAll()

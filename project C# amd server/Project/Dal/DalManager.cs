@@ -18,7 +18,7 @@ namespace Dal
         public DalManager()
         {
             ServiceCollection services = new ServiceCollection();
-            services.AddSingleton<NutritionContext>();
+            services.AddSingleton<NutritionInstitute>();
             //DBActions db = new DBActions(/*builder.*/Configuration);
             //string connStr = db.GetConnectionString("NutritionContext");
             //Services.AddDbContext<NutritionContext>(opt => opt.UseSqlServer(connStr));

@@ -1,10 +1,10 @@
-﻿using Bl.BlModels;
-using Dal.DalApi;
+﻿using Dal.DalApi;
 using Dal.Services;
 using Dal.Models;
 using Bl.Blservices;
 using Bl.BlApi;
 using Dal;
+using Bl.BlModels;
 
 namespace Bl.Blservices
 {
@@ -18,13 +18,7 @@ namespace Bl.Blservices
         }
 
         #region get functions
-        public List<BlModels.Meeting> GetTodatMeetingsById(int Id)
-        {
-            List<BlModels.Meeting> meetings = new List<BlModels.Meeting>();
-            var list = dietitianService.GetMeetingsById(Id).Where(d => d.Date == DateTime.Today).ToList();
-            list.ForEach(m => meetings.Add(new BlModels.Meeting() { FirstName = m.Client.FirstName, LastName = m.Client.LastName, Age = DateTime.Now.Year - m.Client.BirthDate.Year, Hour = m.Hour, Phone = m.Client.Phone }));
-            return meetings;
-        }
+     
 
         public List<BlDietitian> GetAll()
         {
@@ -35,7 +29,15 @@ namespace Bl.Blservices
 
 
         }
+        List<MeetingForDietitian> IBlDietitianService.GetTodatMeetingsById(int Id)
+        {
+            List<BlModels.MeetingForDietitian> meetings = new List<BlModels.MeetingForDietitian>();
+            var list = dietitianService.GetMeetingsById(Id).Where(d => d.Date == DateTime.Today).ToList();
+            List<BlModels.Dietitian> dietitians = new List<BlModels.Dietitian>();
 
+            list.ForEach(m => meetings.Add(new BlModels.MeetingForDietitian() { FirstName = m.Client.FirstName, LastName = m.Client.LastName, Age = DateTime.Now.Year - m.Client.BirthDate.Year, Hour = m.Hour, Phone = m.Client.Phone }));
+            return meetings;
+        }
 
 
         #endregion get functions
@@ -55,6 +57,8 @@ namespace Bl.Blservices
             dietitianService.Add(dietitian);
             return d;
         }
+
+       
 
         #endregion add functions
 

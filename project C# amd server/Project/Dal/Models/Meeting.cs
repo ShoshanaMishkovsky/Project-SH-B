@@ -11,13 +11,13 @@ public partial class Meeting
 
     public int ClientId { get; set; }
 
-    public string Status { get; set; } = null!;
+    public string Status { get; set; }
 
     public DateTime Date { get; set; }
 
     public TimeSpan Hour { get; set; }
 
-    public virtual Client Client { get; set; } = null!;
+    public virtual Client Client { get; set; }
 
-    public virtual Dietitian Dietican { get; set; } = null!;
+    public virtual Dietitian Dietican { get; set; }
 }
