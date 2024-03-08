@@ -1,5 +1,6 @@
 ﻿using Dal.DalApi;
 using Dal.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace Dal.Services
         public List<Meeting> GetMeetingsById(int id)
         {
             List<Dal.Models.Meeting> list = new List<Meeting>();
-            list= nutritionContext.Meetings.Where(m => m.DieticanId == id).ToList();
+            list= nutritionContext.Meetings.Include(m=> m.Client ).Include(m => m.Client).Where(m => m.DieticanId == id).ToList();
             return list;
         }
  

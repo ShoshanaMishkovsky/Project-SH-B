@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Bl.BlApi
 {
-    public interface Icrud<T,T1>
+    public interface Icrud<T>
     {
 
-        List<T1> GetAll();
-        T Add(T obg);
+        List<T> GetAll();
+        //T Add(T obg);
         //T Update(T obg, int id);
         //int Delete(T obg);
     }

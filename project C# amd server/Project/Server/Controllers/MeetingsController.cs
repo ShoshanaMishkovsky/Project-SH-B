@@ -16,7 +16,7 @@ namespace Server.Controllers
             this.BlMeetingService = instance.Meetings;
         }
         [HttpGet]
-        public List<General_meeting_details> GetAll()
+        public List<AllTheDetailsOfMeeting> GetAll()
         {
             return BlMeetingService.GetAll();
         }

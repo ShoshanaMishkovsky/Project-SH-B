@@ -666,4 +666,3 @@ H:\project C# amd server\Project-SH-B\project C# amd server\Project\Server\obj\D
 H:\project C# amd server\Project-SH-B\project C# amd server\Project\Server\obj\Debug\net7.0\Server.csproj.CopyComplete
 H:\project C# amd server\Project-SH-B\project C# amd server\Project\Server\obj\Debug\net7.0\Server.genruntimeconfig.cache
 H:\project C# amd server\Project-SH-B\project C# amd server\Project\Server\obj\Debug\net7.0\ref\Server.dll
-C:\Project-SH-B\project C# amd server\Project\Server\obj\Debug\net7.0\Server.MvcApplicationPartsAssemblyInfo.cs

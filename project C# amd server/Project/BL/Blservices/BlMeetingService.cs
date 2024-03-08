@@ -20,30 +20,30 @@ namespace Bl.Blservices
             this.meetingService = (IMeetingService)dalManager.Meetings;
         }
 
-        public Meeting Add(AllTheDetailsOfMeeting obg)
-        {
-           Meeting meeting = new Meeting();
-            meeting.Status = obg.Status;
-            meeting.Date = obg.Date;
-            meeting.ClientId = obg.ClientId;
-            meeting.DieticanId = obg.DieticanId;
-            meeting.Hour = obg.Hour;
+        //public Meeting Add(AllTheDetailsOfMeeting obg)
+        //{
+        //   Meeting meeting = new Meeting();
+        //    meeting.Status = obg.Status;
+        //    meeting.Date = obg.Date;
+        //    meeting.ClientId = obg.ClientId;
+        //    meeting.DieticanId = obg.DieticanId;
+        //    meeting.Hour = obg.Hour;
             
-            meetingService.Add(meeting);
-            return meeting;
+        //    meetingService.Add(meeting);
+        //    return meeting;
 
-        }
+        //}
 
         //public AllTheDetailsOfMeeting Add(BlModels.Meeting.Meeting obg)
         //{
 
         //}
 
-        public List<General_meeting_details> GetAll()
+        public List<AllTheDetailsOfMeeting> GetAll()
         {
-            List<General_meeting_details> BlList = new List<General_meeting_details>();
+            List<AllTheDetailsOfMeeting> BlList = new List<AllTheDetailsOfMeeting>();
             var list = meetingService.GetAll();
-            list.ForEach(m => BlList.Add(new BlModels.General_meeting_details() { ClientId = m.ClientId, DieticanId = m.DieticanId, Date = m.Date }));
+            list.ForEach(m => BlList.Add(new BlModels.AllTheDetailsOfMeeting() {ClientFirstName=m.Client.FirstName,ClientLastName=m.Client.LastName,DieticanFirstName=m.Dietican.FirstName,DieticanLastName=m.Dietican.LastName,Date=m.Date, Hour=m.Hour,Status=m.Status  }));
             return BlList;
         }
 
@@ -56,14 +56,16 @@ namespace Bl.Blservices
                 meetingService.SetMeetingsAsExist(meeting);
 
             }
+          
         }
 
-        AllTheDetailsOfMeeting BlApi.Icrud<AllTheDetailsOfMeeting>.Add(AllTheDetailsOfMeeting obg)
-        {
-            throw new NotImplementedException();
-        }
+       
 
-        
+      
+
+       
+
+     
     }
 }
 

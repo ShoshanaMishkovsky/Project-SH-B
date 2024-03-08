@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Bl.BlApi
 {
-    internal interface IBlClientService:Icrud<Client,Client>
+    internal interface IBlClientService:Icrud<Client>
     {
 
     }
