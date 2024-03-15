@@ -13,6 +13,7 @@ namespace Dal
 {
     public class DalManager
     {
+       public IClientService ClientService { get; set; }
       public IDietitianService Dietitians { get; }
         public IMeetingService Meetings { get; }
         public DalManager()

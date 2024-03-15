@@ -10,10 +10,6 @@ namespace Bl.Blservices
 {
     internal class BlClientService : IBlClientService
     {
-        public Client Add(Client obg)
-        {
-            throw new NotImplementedException();
-        }
 
         public List<Client> GetAll()
         {

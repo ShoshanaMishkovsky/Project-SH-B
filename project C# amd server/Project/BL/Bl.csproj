@@ -7,13 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Dal\Dal.csproj" />
+    <Compile Remove="BlModels\Client\**" />
+    <Compile Remove="BlModels\Dietitian\**" />
+    <Compile Remove="BlModels\Meeting\**" />
+    <EmbeddedResource Remove="BlModels\Client\**" />
+    <EmbeddedResource Remove="BlModels\Dietitian\**" />
+    <EmbeddedResource Remove="BlModels\Meeting\**" />
+    <None Remove="BlModels\Client\**" />
+    <None Remove="BlModels\Dietitian\**" />
+    <None Remove="BlModels\Meeting\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="BlModels\Client\" />
-    <Folder Include="BlModels\Dietitian\" />
-    <Folder Include="BlModels\Meeting\" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dal\Dal.csproj" />
   </ItemGroup>
 
 </Project>
