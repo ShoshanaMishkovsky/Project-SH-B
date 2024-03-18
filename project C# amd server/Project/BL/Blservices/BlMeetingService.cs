@@ -1,4 +1,5 @@
-﻿using Bl.BlApi;
+﻿using AutoMapper;
+using Bl.BlApi;
 using Bl.BlModels;
 using Dal;
 using Dal.DalApi;
@@ -15,9 +16,11 @@ namespace Bl.Blservices
     public class BlMeetingService : IBlMeetingService
     {
         IMeetingService meetingService;
-        public BlMeetingService(DalManager dalManager)
+        IMapper mapper;
+        public BlMeetingService(DalManager dalManager, IMapper mapper)
         {
             this.meetingService = (IMeetingService)dalManager.Meetings;
+            this.mapper = mapper;
         }
 
         //public Meeting Add(AllTheDetailsOfMeeting obg)
@@ -43,7 +46,7 @@ namespace Bl.Blservices
         {
             List<AllTheDetailsOfMeeting> BlList = new List<AllTheDetailsOfMeeting>();
             var list = meetingService.GetAll();
-            list.ForEach(m => BlList.Add(new BlModels.AllTheDetailsOfMeeting() {ClientFirstName=m.Client.FirstName,ClientLastName=m.Client.LastName,DieticanFirstName=m.Dietican.FirstName,DieticanLastName=m.Dietican.LastName,Date=m.Date, Hour=m.Hour,Status=m.Status  }));
+            list.ForEach(m => BlList.Add(mapper.Map<Bl.BlModels.AllTheDetailsOfMeeting>(m)));
             return BlList;
         }
 

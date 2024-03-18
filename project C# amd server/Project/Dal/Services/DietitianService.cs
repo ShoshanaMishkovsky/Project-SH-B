@@ -32,6 +32,7 @@ namespace Dal.Services
         public Dietitian Add(Dietitian dietitian)
         {
             nutritionContext.Add(dietitian);
+            nutritionContext.SaveChanges();
             return dietitian;
         }
 

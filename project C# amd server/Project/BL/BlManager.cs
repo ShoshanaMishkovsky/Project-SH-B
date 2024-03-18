@@ -1,4 +1,5 @@
-﻿using Bl.BlApi;
+﻿using AutoMapper;
+using Bl.BlApi;
 using Bl.Blservices;
 using Dal;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,7 +22,8 @@ namespace Bl
             services.AddSingleton<DalManager>();
             services.AddScoped<IBlDietitianService,BlDietitianService>();
             services.AddScoped<IBlMeetingService, BlMeetingService>();
-          
+            services.AddAutoMapper(typeof(AutoMapper.AutoMapperProfile));
+
             ServiceProvider serviceProvider = services.BuildServiceProvider();
 
             Dietitians = serviceProvider.GetRequiredService<IBlDietitianService>();

@@ -5,6 +5,7 @@ using Bl.Blservices;
 using Bl.BlApi;
 using Dal;
 using Bl.BlModels;
+using AutoMapper;
 
 namespace Bl.Blservices
 {
@@ -12,9 +13,11 @@ namespace Bl.Blservices
     public class BlDietitianService: IBlDietitianService
     {
         IDietitianService dietitianService;
-        public BlDietitianService(DalManager instance)
+        IMapper map;
+        public BlDietitianService(DalManager instance, IMapper myMap)
         {
             this.dietitianService =instance.Dietitians;
+            map = myMap;
         }
 
         #region get functions
@@ -24,7 +27,7 @@ namespace Bl.Blservices
         {
             List<BlDietitian> blDietitians = new List<BlDietitian>();
             var list = dietitianService.GetAll();
-            list.ForEach(d => blDietitians.Add(new BlDietitian() { Email = d.Email, Phone = d.Phone, FirstName = d.FirstName, LastName = d.LastName, Kind = d.Kind }));
+            list.ForEach(d => blDietitians.Add(map.Map<Bl.BlModels.BlDietitian>(d)));
             return blDietitians;
 
 
@@ -46,14 +49,7 @@ namespace Bl.Blservices
 
         public BlModels.Dietitian Add(BlModels.Dietitian d)
         {
-            Dal.Models.Dietitian dietitian = new();
-
-            dietitian.Kind = d.Kind;
-            dietitian.Id = d.Id;
-            dietitian.LastName = d.LastName;
-            dietitian.FirstName = d.FirstName;
-            dietitian.Email = d.Email;
-            dietitian.Phone = d.Phone;
+            Dal.Models.Dietitian dietitian = map.Map<Dal.Models.Dietitian>(d);
             dietitianService.Add(dietitian);
             return d;
         }

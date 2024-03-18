@@ -10,6 +10,7 @@ namespace Bl.BlApi
     public interface IBlDietitianService:Icrud<BlDietitian>
     {
         public List<MeetingForDietitian> GetTodatMeetingsById(int Id);
+        public BlModels.Dietitian Add(BlModels.Dietitian d);
 
     }
 }

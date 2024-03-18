@@ -14,7 +14,7 @@ namespace Server.Controllers
         //IBlClientService BlClientService;
         //public ClientsController(BlManager blManager)
         //{
-        //    BlClientService= blManager;
+        //    BlClientService = blManager;
         //}
         //[HttpPost]
         //public ActionResult<cli> AddClient(Bl.BlModels.Dietitian dietitian)
