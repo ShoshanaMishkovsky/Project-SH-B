@@ -19,7 +19,10 @@ namespace Bl.AutoMapper
                 CreateMap<Dal.Models.Dietitian, Bl.BlModels.BlDietitian>();
                 CreateMap<Dal.Models.Dietitian, Bl.BlModels.Dietitian>();
                 CreateMap<Dal.Models.Meeting, Bl.BlModels.AllTheDetailsOfMeeting>();
-              
+                CreateMap<Dal.Models.Client, Bl.BlModels.Client>();
+                CreateMap<Bl.BlModels.Client, Dal.Models.Client>();
+                CreateMap<Dal.Models.Client, Bl.BlModels.ClientForGet>();
+
             }
         }
     }

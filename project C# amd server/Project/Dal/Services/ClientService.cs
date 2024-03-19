@@ -16,16 +16,26 @@ namespace Dal.Services
         {
             this.nutritionContext = nutrition;
         }
-
+     
         public Client Add(Client client)
         {
             nutritionContext.Clients.Add(client);
+            nutritionContext.SaveChanges();
             return client;
         }
 
         public List<Client> GetAll()
         {
            return nutritionContext.Clients.ToList();
+        }
+
+        public int SuspendClient(int id)
+        {
+           Client client=nutritionContext.Clients.FirstOrDefault(c => c.Id == id);
+            client.Active = false;
+            nutritionContext.SaveChanges();
+            return id;
+
         }
     }
 }

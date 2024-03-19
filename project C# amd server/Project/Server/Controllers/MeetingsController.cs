@@ -21,9 +21,10 @@ namespace Server.Controllers
             return BlMeetingService.GetAll();
         }
         [HttpPut]
-        public void SetMeetingsAsExist(General_meeting_details general_Meeting_Details)
+        public ActionResult<AllTheDetailsOfMeeting> SetMeetingsAsExist(General_meeting_details general_Meeting_Details)
         {
-            BlMeetingService.SetMeetingsAsExist(general_Meeting_Details);
+
+            return BlMeetingService.SetMeetingsAsExist(general_Meeting_Details);
         }
         //[HttpPost]
         //public ActionResult<Meeting> Post()

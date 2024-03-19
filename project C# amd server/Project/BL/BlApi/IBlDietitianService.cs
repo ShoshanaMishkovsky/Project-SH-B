@@ -11,6 +11,7 @@ namespace Bl.BlApi
     {
         public List<MeetingForDietitian> GetTodatMeetingsById(int Id);
         List<BlDietitian> GetAll();
+        int Delete(int Id);
 
     }
 }

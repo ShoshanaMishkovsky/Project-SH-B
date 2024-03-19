@@ -17,5 +17,7 @@ public partial class Client
 
     public DateTime BirthDate { get; set; }
 
+    public bool? Active { get; set; }
+
     public virtual ICollection<Meeting> Meetings { get; set; } = new List<Meeting>();
 }

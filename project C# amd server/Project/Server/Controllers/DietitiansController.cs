@@ -35,7 +35,11 @@ namespace Server.Controllers
         {
             return dietitianService.Add(dietitian);
         }
-
+        [HttpDelete("{DietitianId}")]
+        public ActionResult<int> Delete(int DietitianId)
+        {
+            return dietitianService.Delete(DietitianId);
+        }
 
     }
 }

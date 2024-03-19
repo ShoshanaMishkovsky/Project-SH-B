@@ -18,9 +18,18 @@ namespace Server.Controllers
             BlClientService = blManager.Clients;
         }
         [HttpPost]
-        public ActionResult<Client> AddClient(Client client)
+        public ActionResult<Bl.BlModels.Client> AddClient(Bl.BlModels.Client client)
         {
             return BlClientService.Add(client);
+        }
+        [HttpDelete("{clientId}")]
+        public ActionResult<int> DeleteClient(int clientId)
+        {
+            return BlClientService.SuspendClient(clientId);
+        }
+        [HttpGet]
+        public ActionResult<List<ClientForGet>> GetAll() {
+            return BlClientService.GetClients();
         }
     }
 }

@@ -13,10 +13,12 @@ namespace Bl.Blservices
     public class BlDietitianService: IBlDietitianService
     {
         IDietitianService dietitianService;
+        IMeetingService meetingService;
         IMapper map;
         public BlDietitianService(DalManager instance, IMapper myMap)
         {
             this.dietitianService =instance.Dietitians;
+            this.meetingService = instance.Meetings;
             map = myMap;
         }
 
@@ -54,7 +56,22 @@ namespace Bl.Blservices
             return d;
         }
 
-       
+        public int Delete(int id)
+        {
+            Meeting meeting = new();
+            meeting=meetingService.GetAll().Where(c=>c.Status=="invited").FirstOrDefault(c=>c.DieticanId==id);
+            if (meeting==null)
+            {
+              return  dietitianService.Delete(id);
+            }
+            else
+            {
+                throw new NotImplementedException("You can't delete this dietitian");
+            }
+
+        }
+
+
 
         #endregion add functions
 

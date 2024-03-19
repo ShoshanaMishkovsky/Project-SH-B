@@ -36,6 +36,9 @@ public partial class NutritionInstitute : DbContext
             entity.Property(e => e.Id)
                 .ValueGeneratedNever()
                 .HasColumnName("id");
+            entity.Property(e => e.Active)
+                .IsRequired()
+                .HasDefaultValueSql("((1))");
             entity.Property(e => e.BirthDate).HasColumnType("datetime");
             entity.Property(e => e.FirstName)
                 .IsRequired()

@@ -9,5 +9,6 @@ namespace Dal.DalApi
 {
     public interface IClientService:Icrud<Client>
     {
+        int SuspendClient(int id);
     }
 }

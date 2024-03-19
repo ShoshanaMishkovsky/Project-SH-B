@@ -9,7 +9,8 @@ namespace Bl.BlApi
 {
     public interface IBlClientService:Icrud<Client>
     {
-        public Client Add(Client client);
+        int SuspendClient(int id);
+        List<ClientForGet> GetClients();
 
     }
 }

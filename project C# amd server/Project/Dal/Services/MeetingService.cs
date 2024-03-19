@@ -27,10 +27,12 @@ namespace Dal.Services
         {
           return nutritionContext.Meetings.Include(m => m.Client).Include(m => m.Dietican).ToList();
         }
-        public void SetMeetingsAsExist(Meeting meeting)
+        public Meeting SetMeetingsAsExist(Meeting meeting)
         {
            Meeting meeting1= nutritionContext.Meetings.FirstOrDefault(m=>m.Code==meeting.Code);
             meeting1.Status = "existed";
+            nutritionContext.SaveChanges();
+            return meeting1;
         }
 
 

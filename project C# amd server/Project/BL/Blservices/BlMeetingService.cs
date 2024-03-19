@@ -55,15 +55,16 @@ namespace Bl.Blservices
             return BlList;
         }
 
-        public void SetMeetingsAsExist(General_meeting_details meeting_details)
+        public AllTheDetailsOfMeeting SetMeetingsAsExist(General_meeting_details meeting_details)
         {
             Dal.Models.Meeting meeting = meetingService.GetAll().Find(m => (m.DieticanId == meeting_details.DieticanId && m.ClientId == meeting_details.ClientId && m.Date == meeting_details.Date));
 
             if (meeting != null)
             {
-                meetingService.SetMeetingsAsExist(meeting);
+               return mapper.Map<AllTheDetailsOfMeeting>(meetingService.SetMeetingsAsExist(meeting));
 
             }
+            return null;
           
         }
 

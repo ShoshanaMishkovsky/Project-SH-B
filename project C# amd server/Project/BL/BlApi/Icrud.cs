@@ -12,6 +12,6 @@ namespace Bl.BlApi
       
         T Add(T obg);
         //T Update(T obg, int id);
-        //int Delete(T obg);
+        //int Delete(int code);
     }
 }

@@ -36,5 +36,17 @@ namespace Dal.Services
             return dietitian;
         }
 
+        public int Delete(int id)
+        {
+            Dietitian dietitian = nutritionContext.Dietitians.FirstOrDefault(m => m.Id == id);
+            nutritionContext.Dietitians.Remove(dietitian);
+            nutritionContext.SaveChanges() ;
+            return id;
+        }
+        //public int Delete(int id)
+        //{
+        //    return nutritionContext.D
+        //}
+
     }
 }

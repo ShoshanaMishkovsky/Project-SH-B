@@ -19,5 +19,6 @@ namespace Bl.BlModels
         public string Kind { get; set; } = null!;
 
         public DateTime BirthDate { get; set; }
+        public bool? Active { get; set; }
     }
 }
