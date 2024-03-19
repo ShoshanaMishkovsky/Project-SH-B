@@ -13,7 +13,7 @@ namespace Dal
 {
     public class DalManager
     {
-       public IClientService ClientService { get; set; }
+       public IClientService Clients { get; set; }
       public IDietitianService Dietitians { get; }
         public IMeetingService Meetings { get; }
         public DalManager()
@@ -25,10 +25,11 @@ namespace Dal
             //Services.AddDbContext<NutritionContext>(opt => opt.UseSqlServer(connStr));
             services.AddScoped<IDietitianService, DietitianService>();
             services.AddScoped<IMeetingService,MeetingService>();
+            services.AddScoped<IClientService, ClientService>();
             ServiceProvider servicesProvider = services.BuildServiceProvider();
             Dietitians= servicesProvider.GetRequiredService<IDietitianService>();
             Meetings= servicesProvider.GetRequiredService<IMeetingService>();
-
+            Clients = servicesProvider.GetRequiredService<IClientService>();
         }
     }
 }

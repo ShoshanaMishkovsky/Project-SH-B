@@ -14,6 +14,7 @@ namespace Bl
     public class BlManager
     {
         public IBlDietitianService Dietitians { get; set; }
+        public IBlClientService Clients { get; set; }
         public IBlMeetingService Meetings { get; set; }
       
         public BlManager()
@@ -22,12 +23,15 @@ namespace Bl
             services.AddSingleton<DalManager>();
             services.AddScoped<IBlDietitianService,BlDietitianService>();
             services.AddScoped<IBlMeetingService, BlMeetingService>();
+            services.AddScoped<IBlClientService, BlClientService>();
             services.AddAutoMapper(typeof(AutoMapper.AutoMapperProfile));
 
             ServiceProvider serviceProvider = services.BuildServiceProvider();
 
             Dietitians = serviceProvider.GetRequiredService<IBlDietitianService>();
             Meetings = serviceProvider.GetRequiredService<IBlMeetingService>();
+
+            Clients = serviceProvider.GetRequiredService<IBlClientService>();
         }
     }
 }

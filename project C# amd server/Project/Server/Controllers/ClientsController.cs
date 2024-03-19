@@ -4,6 +4,7 @@ using Bl.BlModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Bl;
+using Bl.BlApi;
 
 namespace Server.Controllers
 {
@@ -11,15 +12,15 @@ namespace Server.Controllers
     [ApiController]
     public class ClientsController : ControllerBase
     {
-        //IBlClientService BlClientService;
-        //public ClientsController(BlManager blManager)
-        //{
-        //    BlClientService = blManager;
-        //}
-        //[HttpPost]
-        //public ActionResult<cli> AddClient(Bl.BlModels.Dietitian dietitian)
-        //{
-        //    return BlClientService.Add(dietitian);
-        //}
+        IBlClientService BlClientService;
+        public ClientsController(BlManager blManager)
+        {
+            BlClientService = blManager.Clients;
+        }
+        [HttpPost]
+        public ActionResult<Client> AddClient(Client client)
+        {
+            return BlClientService.Add(client);
+        }
     }
 }

@@ -23,6 +23,11 @@ namespace Bl.Blservices
             this.mapper = mapper;
         }
 
+        public AllTheDetailsOfMeeting Add(AllTheDetailsOfMeeting obg)
+        {
+            throw new NotImplementedException();
+        }
+
         //public Meeting Add(AllTheDetailsOfMeeting obg)
         //{
         //   Meeting meeting = new Meeting();
@@ -31,7 +36,7 @@ namespace Bl.Blservices
         //    meeting.ClientId = obg.ClientId;
         //    meeting.DieticanId = obg.DieticanId;
         //    meeting.Hour = obg.Hour;
-            
+
         //    meetingService.Add(meeting);
         //    return meeting;
 

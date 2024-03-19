@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bl.BlModels
 {
-    internal class Client
+    public class Client
     {
         public int Id { get; set; }
 
