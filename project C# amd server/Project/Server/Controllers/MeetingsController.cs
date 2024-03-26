@@ -20,18 +20,18 @@ namespace Server.Controllers
         {
             return BlMeetingService.GetAll();
         }
-        [HttpPut]
-        public ActionResult<AllTheDetailsOfMeeting> SetMeetingsAsExist(General_meeting_details general_Meeting_Details)
+        [HttpPut("{meetingStatus}")]
+        public ActionResult<AllTheDetailsOfMeeting> SetMeetingStatus(General_meeting_details general_Meeting_Details, string meetingStatus)
         {
 
-            return BlMeetingService.SetMeetingsAsExist(general_Meeting_Details);
+            return BlMeetingService.SetMeetingStatus(general_Meeting_Details, meetingStatus);
         }
-        //[HttpPost]
-        //public ActionResult<Meeting> Post()
-        //{
-        //   return  BlMeetingService.Add();
-            
-        //}
+        [HttpPost]
+        public ActionResult<Meeting> AddMeeting(Meeting meeting)
+        {
+
+            return BlMeetingService.Add(meeting);
+        }
 
     }
 }

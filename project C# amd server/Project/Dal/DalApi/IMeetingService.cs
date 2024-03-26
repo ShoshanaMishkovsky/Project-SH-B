@@ -9,7 +9,8 @@ namespace Dal.DalApi
 {
     public interface IMeetingService:Icrud<Meeting>
     {
-        public Meeting SetMeetingsAsExist(Meeting meeting);
+      
+        public Meeting SetMeetingStatus(Meeting meeting,string meetingStatus);
         //public int AddMeeting(Meeting meeting);
     }
 }

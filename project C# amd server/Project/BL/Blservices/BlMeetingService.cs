@@ -23,9 +23,15 @@ namespace Bl.Blservices
             this.mapper = mapper;
         }
 
-        public AllTheDetailsOfMeeting Add(AllTheDetailsOfMeeting obg)
+    
+
+
+
+        public BlModels.Meeting Add(BlModels.Meeting meeting)
         {
-            throw new NotImplementedException();
+            Dal.Models.Meeting meeting1 = mapper.Map<Dal.Models.Meeting>(meeting);
+            meetingService.Add(meeting1);
+            return meeting;
         }
 
         //public Meeting Add(AllTheDetailsOfMeeting obg)
@@ -55,26 +61,38 @@ namespace Bl.Blservices
             return BlList;
         }
 
-        public AllTheDetailsOfMeeting SetMeetingsAsExist(General_meeting_details meeting_details)
+        //public AllTheDetailsOfMeeting SetMeetingsAsExist(General_meeting_details meeting_details)
+        //{
+        //    Dal.Models.Meeting meeting = meetingService.GetAll().Find(m => (m.DieticanId == meeting_details.DieticanId && m.ClientId == meeting_details.ClientId && m.Date == meeting_details.Date));
+
+        //    if (meeting != null)
+        //    {
+        //       return mapper.Map<AllTheDetailsOfMeeting>(meetingService.SetMeetingsAsExist(meeting));
+
+        //    }
+        //    return null;
+          
+        //}
+        public AllTheDetailsOfMeeting SetMeetingStatus(General_meeting_details meeting_details, string meetingStatus)
         {
             Dal.Models.Meeting meeting = meetingService.GetAll().Find(m => (m.DieticanId == meeting_details.DieticanId && m.ClientId == meeting_details.ClientId && m.Date == meeting_details.Date));
 
             if (meeting != null)
             {
-               return mapper.Map<AllTheDetailsOfMeeting>(meetingService.SetMeetingsAsExist(meeting));
+                return mapper.Map<AllTheDetailsOfMeeting>(meetingService.SetMeetingStatus(meeting,meetingStatus));
 
             }
             return null;
-          
+
         }
 
-       
 
-      
 
-       
 
-     
+
+
+
+
     }
 }
 

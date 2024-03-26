@@ -58,7 +58,7 @@ namespace Bl.Blservices
 
         public int Delete(int id)
         {
-            Meeting meeting = new();
+            Dal.Models.Meeting meeting = new();
             meeting=meetingService.GetAll().Where(c=>c.Status=="invited").FirstOrDefault(c=>c.DieticanId==id);
             if (meeting==null)
             {
