@@ -21,6 +21,8 @@ public partial class NutritionInstitute : DbContext
 
     public virtual DbSet<Meeting> Meetings { get; set; }
 
+    public virtual DbSet<QueuesForDietitian> QueuesForDietitians { get; set; }
+
     public virtual DbSet<WorkHour> WorkHours { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -121,16 +123,37 @@ public partial class NutritionInstitute : DbContext
                 .HasConstraintName("dieticanId_fk");
         });
 
+        modelBuilder.Entity<QueuesForDietitian>(entity =>
+        {
+            entity.HasKey(e => e.Code).HasName("QueuesForDietitian_pk");
+
+            entity.ToTable("QueuesForDietitian");
+
+            entity.Property(e => e.Code).HasColumnName("code");
+            entity.Property(e => e.Available).HasColumnName("available");
+            entity.Property(e => e.Date)
+                .HasColumnType("datetime")
+                .HasColumnName("date");
+            entity.Property(e => e.DieticanId).HasColumnName("dieticanId");
+            entity.Property(e => e.Hour).HasColumnName("hour");
+
+            entity.HasOne(d => d.Dietican).WithMany(p => p.QueuesForDietitians)
+                .HasForeignKey(d => d.DieticanId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("dieticanIdAvailableQueue_fk");
+        });
+
         modelBuilder.Entity<WorkHour>(entity =>
         {
-            entity.HasNoKey();
+            entity.HasKey(e => e.Code).HasName("PK__WorkHour__357D4CF8F6FBF299");
 
+            entity.Property(e => e.Code).HasColumnName("code");
             entity.Property(e => e.DayInTheWeek).HasColumnName("dayInTheWeek");
             entity.Property(e => e.DieticanId).HasColumnName("dieticanId");
             entity.Property(e => e.EndHour).HasColumnName("endHour");
             entity.Property(e => e.StartHour).HasColumnName("startHour");
 
-            entity.HasOne(d => d.Dietican).WithMany()
+            entity.HasOne(d => d.Dietican).WithMany(p => p.WorkHours)
                 .HasForeignKey(d => d.DieticanId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("dieticanId_fk2");

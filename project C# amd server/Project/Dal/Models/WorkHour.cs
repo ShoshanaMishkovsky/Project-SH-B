@@ -5,6 +5,8 @@ namespace Dal.Models;
 
 public partial class WorkHour
 {
+    public int Code { get; set; }
+
     public int DayInTheWeek { get; set; }
 
     public int DieticanId { get; set; }

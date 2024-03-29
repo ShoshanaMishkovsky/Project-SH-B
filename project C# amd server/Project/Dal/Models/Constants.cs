@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Dal.Models
 {
-    //public static class Constants
-    //{
-    //    public static 
-    //}
+    public  class Constants
+    {
+        public static int QueueLength = 30;
+    }
 }

@@ -58,12 +58,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 // builder.Services.AddScoped<IDoctor, DoctorRepo>();
-builder.Services.AddSingleton<BlManager>();
 
 
 DBActions db = new DBActions(builder.Configuration);
-string connStr = db.GetConnectionString("NutritionContext");
-builder.Services.AddDbContext<NutritionInstitute>(opt => opt.UseSqlServer(connStr));
+string connStr = db.GetConnectionString("NutritionInstitute");
+builder.Services.AddScoped<BlManager>(x => new BlManager(connStr));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var app = builder.Build();

@@ -18,4 +18,8 @@ public partial class Dietitian
     public string Kind { get; set; }
 
     public virtual ICollection<Meeting> Meetings { get; set; } = new List<Meeting>();
+
+    public virtual ICollection<QueuesForDietitian> QueuesForDietitians { get; set; } = new List<QueuesForDietitian>();
+
+    public virtual ICollection<WorkHour> WorkHours { get; set; } = new List<WorkHour>();
 }

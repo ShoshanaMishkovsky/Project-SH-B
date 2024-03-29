@@ -17,10 +17,10 @@ namespace Bl
         public IBlClientService Clients { get; set; }
         public IBlMeetingService Meetings { get; set; }
       
-        public BlManager()
+        public BlManager(string connStr)
         {
             ServiceCollection services = new ServiceCollection();
-            services.AddSingleton<DalManager>();
+         services.AddScoped<DalManager>(x => new DalManager(connStr));
             services.AddScoped<IBlDietitianService,BlDietitianService>();
             services.AddScoped<IBlMeetingService, BlMeetingService>();
             services.AddScoped<IBlClientService, BlClientService>();

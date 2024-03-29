@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dal.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,5 +20,6 @@ namespace Bl.BlModels
         public string Phone { get; set; } = null!;
 
         public string Kind { get; set; } = null!;
+      
     }
 }

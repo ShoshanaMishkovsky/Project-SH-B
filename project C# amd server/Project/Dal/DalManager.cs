@@ -2,6 +2,7 @@
 using Dal.Models;
 using Dal.Services;
 using DataAccess;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,11 @@ namespace Dal
        public IClientService Clients { get; set; }
       public IDietitianService Dietitians { get; }
         public IMeetingService Meetings { get; }
-        public DalManager()
+        public DalManager(string connStr)
         {
             ServiceCollection services = new ServiceCollection();
-            services.AddSingleton<NutritionInstitute>();
+         
+            services.AddDbContext<NutritionInstitute>(opt => opt.UseSqlServer(connStr));
             //DBActions db = new DBActions(/*builder.*/Configuration);
             //string connStr = db.GetConnectionString("NutritionContext");
             //Services.AddDbContext<NutritionContext>(opt => opt.UseSqlServer(connStr));
