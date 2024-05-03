@@ -15,7 +15,7 @@ namespace Bl.AutoMapper
         public AutoMapperProfile()
         {
             {
-                CreateMap<Bl.BlModels.Dietitian, Dal.Models.Dietitian>();
+                CreateMap<FullDietitian, Dal.Models.Dietitian>();
                 CreateMap<Dal.Models.Dietitian, Bl.BlModels.BlDietitian>();
                 CreateMap<Dal.Models.Dietitian, Bl.BlModels.Dietitian>();
                 CreateMap<Dal.Models.Meeting, Bl.BlModels.AllTheDetailsOfMeeting>();

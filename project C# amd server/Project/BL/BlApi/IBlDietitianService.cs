@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace Bl.BlApi
 {
-    public interface IBlDietitianService:Icrud<Dietitian>
+    public interface IBlDietitianService:Icrud<FullDietitian>
     {
         public List<MeetingForDietitian> GetTodatMeetingsById(int Id);
         List<BlDietitian> GetAll();
         int Delete(int Id);
+
 
     }
 }

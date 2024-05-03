@@ -22,7 +22,12 @@ namespace Dal.Services
             list= nutritionContext.Meetings.Include(m=> m.Client ).Include(m => m.Client).Where(m => m.DieticanId == id).ToList();
             return list;
         }
- 
+      public List<WorkHour> AddHours(List<WorkHour> workHour)
+        {
+            workHour.ForEach(w => nutritionContext.WorkHours.Add(w));
+            nutritionContext.SaveChanges();
+            return workHour;
+        }
 
         public List<Dietitian> GetAll()
         {
@@ -31,11 +36,11 @@ namespace Dal.Services
 
         public Dietitian Add(Dietitian dietitian)
         {
-            nutritionContext.Add(dietitian);
+            nutritionContext.Dietitians.Add(dietitian);
             nutritionContext.SaveChanges();
             return dietitian;
         }
-
+        
         public int Delete(int id)
         {
             Dietitian dietitian = nutritionContext.Dietitians.FirstOrDefault(m => m.Id == id);

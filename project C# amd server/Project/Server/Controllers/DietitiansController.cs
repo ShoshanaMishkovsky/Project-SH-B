@@ -31,7 +31,7 @@ namespace Server.Controllers
 
         }
         [HttpPost]
-        public ActionResult<Bl.BlModels.Dietitian> AddDietitian(Bl.BlModels.Dietitian dietitian)
+        public ActionResult<FullDietitian> AddDietitian(FullDietitian dietitian)
         {
             return dietitianService.Add(dietitian);
         }

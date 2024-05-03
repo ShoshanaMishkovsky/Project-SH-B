@@ -49,11 +49,15 @@ namespace Bl.Blservices
 
         #region add functions
 
-        public BlModels.Dietitian Add(BlModels.Dietitian d)
+        public FullDietitian Add(FullDietitian dietitian)
         {
-            Dal.Models.Dietitian dietitian = map.Map<Dal.Models.Dietitian>(d);
-            dietitianService.Add(dietitian);
-            return d;
+            Dal.Models.Dietitian dietitian1 = map.Map<Dal.Models.Dietitian>(dietitian);
+            int dietitianId = dietitianService.Add(dietitian1).Id;
+            List<Dal.Models.WorkHour> hours = new List<Dal.Models.WorkHour>();
+            dietitian.WorkHours.ForEach(h => hours.Add(new Dal.Models.WorkHour() { DieticanId = dietitianId, StartHour = h.StartHour, EndHour = h.EndHour, DayInTheWeek = h.DayInTheWeek }));
+            dietitianService.AddHours(hours);
+
+            return dietitian;
         }
 
         public int Delete(int id)
@@ -69,6 +73,11 @@ namespace Bl.Blservices
                 throw new NotImplementedException("You can't delete this dietitian");
             }
 
+        }
+
+        public BlModels.Dietitian Add(BlModels.Dietitian obg)
+        {
+            throw new NotImplementedException();
         }
 
 
