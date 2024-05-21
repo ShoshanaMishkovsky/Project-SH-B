@@ -29,6 +29,14 @@ namespace Dal.Services
             return workHour;
         }
 
+        public List<QueuesForDietitian> AddQueues(List<QueuesForDietitian> queues)
+        {
+            queues.ForEach(w => nutritionContext.QueuesForDietitians.Add(w));
+            nutritionContext.SaveChanges();
+            return queues;
+        }
+
+
         public List<Dietitian> GetAll()
         {
             return nutritionContext.Dietitians.ToList();

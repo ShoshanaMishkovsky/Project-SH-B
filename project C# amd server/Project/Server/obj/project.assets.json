@@ -3859,7 +3859,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\מישקובסקי שושנה\\.nuget\\packages\\": {},
+    "C:\\Users\\גולדוסר ברכה\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
@@ -3869,7 +3869,7 @@
       "projectUniqueName": "C:\\Project-SH-B\\project C# amd server\\Project\\Server\\Server.csproj",
       "projectName": "Server",
       "projectPath": "C:\\Project-SH-B\\project C# amd server\\Project\\Server\\Server.csproj",
-      "packagesPath": "C:\\Users\\מישקובסקי שושנה\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\גולדוסר ברכה\\.nuget\\packages\\",
       "outputPath": "C:\\Project-SH-B\\project C# amd server\\Project\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
@@ -3877,7 +3877,7 @@
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\מישקובסקי שושנה\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\גולדוסר ברכה\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

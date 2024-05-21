@@ -12,5 +12,6 @@ namespace Dal.DalApi
         public List<Meeting> GetMeetingsById(int id);
         public int Delete(int id);
         public List<WorkHour> AddHours(List<WorkHour> workHour);
+        public List<QueuesForDietitian> AddQueues(List<QueuesForDietitian> queues);
     }
 }

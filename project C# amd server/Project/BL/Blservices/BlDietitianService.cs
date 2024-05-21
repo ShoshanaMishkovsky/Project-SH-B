@@ -56,7 +56,29 @@ namespace Bl.Blservices
             List<Dal.Models.WorkHour> hours = new List<Dal.Models.WorkHour>();
             dietitian.WorkHours.ForEach(h => hours.Add(new Dal.Models.WorkHour() { DieticanId = dietitianId, StartHour = h.StartHour, EndHour = h.EndHour, DayInTheWeek = h.DayInTheWeek }));
             dietitianService.AddHours(hours);
+            List<QueuesForDietitian> queues=new List<QueuesForDietitian>();
+            DateTime dalStartTime = DateTime.Now;
+            int i=0;
+            for (DateTime d = dalStartTime.AddDays(1); i<365; d.AddDays(1), i++)
+            {
+                int day=0;
+                day = d.Day;
+                Dal.Models.WorkHour work;
+                work= hours.FirstOrDefault(h=>h.DayInTheWeek== day);
+                if (work!=null)
+                {
+                    TimeSpan t1 = TimeSpan.FromHours(0.5);
+                    for (TimeSpan t=work.StartHour;t<work.EndHour;t.Add(t1))
+                    {
+                        queues.Add(new QueuesForDietitian() { Available = true, Date = d, DieticanId = dietitianId, Hour = t });
+                    }
+                }
 
+
+            }
+
+
+            dietitianService.AddQueues(queues);
             return dietitian;
         }
 

@@ -3,6 +3,12 @@ using Bl.BlApi;
 using Bl.Blservices;
 using Dal;
 using Microsoft.Extensions.DependencyInjection;
+
+using AutoMapper;
+using Bl.BlApi;
+using Bl.Blservices;
+using Dal;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
