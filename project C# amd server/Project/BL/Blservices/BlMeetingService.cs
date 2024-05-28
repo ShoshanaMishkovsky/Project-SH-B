@@ -30,6 +30,7 @@ namespace Bl.Blservices
         public BlModels.Meeting Add(BlModels.Meeting meeting)
         {
             Dal.Models.Meeting meeting1 = mapper.Map<Dal.Models.Meeting>(meeting);
+
             meetingService.Add(meeting1);
             return meeting;
         }
@@ -53,13 +54,21 @@ namespace Bl.Blservices
 
         //}
 
-        public List<AllTheDetailsOfMeeting> GetAll()
+        public List<AllTheDetailsOfMeeting> GetAllMeetings()
         {
             List<AllTheDetailsOfMeeting> BlList = new List<AllTheDetailsOfMeeting>();
             var list = meetingService.GetAll();
             list.ForEach(m => BlList.Add(mapper.Map<Bl.BlModels.AllTheDetailsOfMeeting>(m)));
             return BlList;
         }
+
+        //public List<AllTheDetailsOfMeeting> GetAllQueues()
+        //{
+        //    List<QueuesForDietitian> BlList = new List<QueuesForDietitian>();
+        //    var list = meetingService.GetAll();
+        //    list.ForEach(m => BlList.Add(mapper.Map<Bl.BlModels.AllTheDetailsOfMeeting>(m)));
+        //    return BlList;
+        //}
 
         //public AllTheDetailsOfMeeting SetMeetingsAsExist(General_meeting_details meeting_details)
         //{
@@ -71,7 +80,7 @@ namespace Bl.Blservices
 
         //    }
         //    return null;
-          
+
         //}
         public AllTheDetailsOfMeeting SetMeetingStatus(General_meeting_details meeting_details, string meetingStatus)
         {

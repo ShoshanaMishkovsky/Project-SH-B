@@ -20,6 +20,7 @@ namespace Dal.Services
         public Meeting Add(Meeting meeting)
         {
             nutritionContext.Add(meeting);
+            //nutritionContext.QueuesForDietitians.ToList().Find(q=>q.DieticanId==meeting.DieticanId&&q.Hour=meeting.Hour).Available = false;
             return meeting;
         }
 

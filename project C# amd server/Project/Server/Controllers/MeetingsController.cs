@@ -18,7 +18,7 @@ namespace Server.Controllers
         [HttpGet]
         public List<AllTheDetailsOfMeeting> GetAll()
         {
-            return BlMeetingService.GetAll();
+            return BlMeetingService.GetAllMeetings();
         }
         [HttpPut("{meetingStatus}")]
         public ActionResult<AllTheDetailsOfMeeting> SetMeetingStatus(General_meeting_details general_Meeting_Details, string meetingStatus)

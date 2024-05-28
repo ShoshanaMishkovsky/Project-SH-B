@@ -51,7 +51,8 @@ namespace Bl.Blservices
 
         public FullDietitian Add(FullDietitian dietitian)
         {
-            Dal.Models.Dietitian dietitian1 = map.Map<Dal.Models.Dietitian>(dietitian);
+            //Dal.Models.Dietitian dietitian1 = map.Map<Dal.Models.Dietitian>(dietitian);
+            Dal.Models.Dietitian dietitian1 =new Dal.Models.Dietitian() { Id=dietitian.Id,Email=dietitian.Email,FirstName=dietitian.FirstName,Kind=dietitian.Kind,Phone=dietitian.Phone,LastName=dietitian.LastName};
             int dietitianId = dietitianService.Add(dietitian1).Id;
             List<Dal.Models.WorkHour> hours = new List<Dal.Models.WorkHour>();
             dietitian.WorkHours.ForEach(h => hours.Add(new Dal.Models.WorkHour() { DieticanId = dietitianId, StartHour = h.StartHour, EndHour = h.EndHour, DayInTheWeek = h.DayInTheWeek }));
@@ -59,16 +60,16 @@ namespace Bl.Blservices
             List<QueuesForDietitian> queues=new List<QueuesForDietitian>();
             DateTime dalStartTime = DateTime.Now;
             int i=0;
-            for (DateTime d = dalStartTime.AddDays(1); i<365; d.AddDays(1), i++)
+            for (DateTime d = dalStartTime.AddDays(1); i<365; d=d.AddDays(1), i++)
             {
-                int day=0;
-                day = d.Day;
+                int day;
+                day = (int)d.DayOfWeek;
                 Dal.Models.WorkHour work;
-                work= hours.FirstOrDefault(h=>h.DayInTheWeek== day);
-                if (work!=null)
+                work = hours.FirstOrDefault(h => h.DayInTheWeek == day);
+                if (work != null)
                 {
                     TimeSpan t1 = TimeSpan.FromHours(0.5);
-                    for (TimeSpan t=work.StartHour;t<work.EndHour;t.Add(t1))
+                    for (TimeSpan t = work.StartHour; t < work.EndHour; t=t.Add(t1))
                     {
                         queues.Add(new QueuesForDietitian() { Available = true, Date = d, DieticanId = dietitianId, Hour = t });
                     }
