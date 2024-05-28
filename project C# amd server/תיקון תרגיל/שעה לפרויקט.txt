@@ -1,0 +1,20 @@
+{
+  "id": 325978412,
+  "firstName": "Galit",
+  "lastName": "Segal",
+  "email": "gs@gmail.com",
+  "phone": "0524784512",
+  "kind": "f",
+  "workHours": [
+    {
+      "dayInTheWeek": 1,
+      "startHour": "09:00:00",
+      "endHour": "15:00:00"
+    },
+ {
+      "dayInTheWeek": 2,
+      "startHour": "10:00:00",
+      "endHour": "17:00:00"
+    }
+  ]
+}
