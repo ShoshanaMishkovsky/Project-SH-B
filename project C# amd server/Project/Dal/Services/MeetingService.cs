@@ -6,12 +6,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dal.Consts;
 
 namespace Dal.Services
 {
     public class MeetingService : IMeetingService
     {
-        NutritionInstitute nutritionContext; 
+        NutritionInstitute nutritionContext;
+       
         public MeetingService(NutritionInstitute nutritionContext)
         {
             this.nutritionContext = nutritionContext;
@@ -43,6 +45,14 @@ namespace Dal.Services
             return meeting1;
         }
 
-       
+        public List<QueuesForDietitian> GetAllQueues()
+        {
+            return nutritionContext.QueuesForDietitians.ToList();
+        }
+
+        public void SetAvailableStatus(Meeting meeting)
+        {
+            nutritionContext.QueuesForDietitians.FirstOrDefault(q=>q.DieticanId==meeting.DieticanId&&q.Hour==meeting.Hour&&q.Date==meeting.Date).Available = Consts.Consts.f;
+        }
     }
 }

@@ -11,6 +11,8 @@ namespace Dal.DalApi
     {
       
         public Meeting SetMeetingStatus(Meeting meeting,string meetingStatus);
-        //public int AddMeeting(Meeting meeting);
+        public List<QueuesForDietitian> GetAllQueues();
+        public void SetAvailableStatus(Meeting meeting);
+
     }
 }

@@ -22,7 +22,8 @@ namespace Bl
         public IBlDietitianService Dietitians { get; set; }
         public IBlClientService Clients { get; set; }
         public IBlMeetingService Meetings { get; set; }
-      
+        public IBlMeetingService Queues { get; set; }
+
         public BlManager(string connStr)
         {
             ServiceCollection services = new ServiceCollection();
@@ -36,7 +37,7 @@ namespace Bl
 
             Dietitians = serviceProvider.GetRequiredService<IBlDietitianService>();
             Meetings = serviceProvider.GetRequiredService<IBlMeetingService>();
-
+            //Queues = serviceProvider.GetRequiredService<IBlMeetingService>();
             Clients = serviceProvider.GetRequiredService<IBlClientService>();
         }
     }

@@ -23,7 +23,7 @@ namespace Bl.Blservices
             this.mapper = mapper;
         }
 
-    
+
 
 
 
@@ -32,6 +32,7 @@ namespace Bl.Blservices
             Dal.Models.Meeting meeting1 = mapper.Map<Dal.Models.Meeting>(meeting);
 
             meetingService.Add(meeting1);
+            meetingService.SetAvailableStatus(meeting1);
             return meeting;
         }
 
@@ -62,6 +63,22 @@ namespace Bl.Blservices
             return BlList;
         }
 
+        public List<BlQueuesForDietitian> GetAllQueues()
+        {
+            List<BlQueuesForDietitian> blQueues = new List<BlQueuesForDietitian>();
+            var q = meetingService.GetAllQueues().Where(q => q.Available == true && q.Date > DateTime.Now).ToList();
+            q.ForEach(q => blQueues.Add(mapper.Map<BlQueuesForDietitian>(q)));
+            return blQueues;
+        }
+        public List<BlQueuesForDietitian> GetQueuesById(int id)
+        {
+            List<BlQueuesForDietitian> blQueues = GetAllQueues().Where(q => q.DieticanId == id).ToList();
+            return blQueues;
+
+        }
+
+
+
         //public List<AllTheDetailsOfMeeting> GetAllQueues()
         //{
         //    List<QueuesForDietitian> BlList = new List<QueuesForDietitian>();
@@ -88,7 +105,7 @@ namespace Bl.Blservices
 
             if (meeting != null)
             {
-                return mapper.Map<AllTheDetailsOfMeeting>(meetingService.SetMeetingStatus(meeting,meetingStatus));
+                return mapper.Map<AllTheDetailsOfMeeting>(meetingService.SetMeetingStatus(meeting, meetingStatus));
 
             }
             return null;

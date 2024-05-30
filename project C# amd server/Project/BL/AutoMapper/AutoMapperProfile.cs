@@ -29,6 +29,7 @@ namespace Bl.AutoMapper
                 CreateMap<Bl.BlModels.Client, Dal.Models.Client>();
                 CreateMap<Dal.Models.Client, Bl.BlModels.ClientForGet>();
                 CreateMap<Bl.BlModels.Meeting, Dal.Models.Meeting>();
+                CreateMap<QueuesForDietitian, BlQueuesForDietitian>();
             }
         }
     }
