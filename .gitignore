@@ -9,7 +9,7 @@
 /coverage
 
 # production
-/build
+#.build (הסר את השורה הזאת אם אתה רוצה להעלות את תיקיית הבילד)
 
 # misc
 .DS_Store
